@@ -3,7 +3,7 @@
 1. npm install
 
 2. npm run dev
-※実際に使用するには、pages/api/ai.tsx内にOPENAI_API_KEEYを設定する必要があります。
+※実際に使用するには、pages/api/ai.tsx内にOPENAI_API_KEYを設定する必要があります。
 
 3. [http://localhost:3000](http://localhost:3000)
 
