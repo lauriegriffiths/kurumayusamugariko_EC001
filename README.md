@@ -7,7 +7,7 @@
 
 3. [http://localhost:3000](http://localhost:3000)
 
-デモ動画:[https://www.youtube.com/watch?v=cZEtedQ9El0](Youtube)
+[デモ動画](https://www.youtube.com/watch?v=cZEtedQ9El0)
 
 
 Next.js + GAS + OPENAI
