@@ -4,35 +4,35 @@ import { useState, useEffect } from "react";
 
 
 export default function Home() {
-	const [ingredients, setIngredients] = useState([]);
-	const [sum, setSum] = useState("");
-	const [time, setTime] = useState("");
+  const [ingredients, setIngredients] = useState([]);
+  const [sum, setSum] = useState("");
+  const [time, setTime] = useState("");
   const [style, setStyle] = useState("");
   const [type, setType] = useState("");
   const [inputValue, setInputValue] = useState("");
 
-	const updateInputValue = () => {
-		let str = "";
+  const updateInputValue = () => {
+    let str = "";
 		if(ingredients.length > 0) {
 			for(let i = 0; i < ingredients.length; i++) {
 				if(i === ingredients.length - 1) {
-					str += ingredients[i];
+          str += ingredients[i];
 				}else{
-					str += ingredients[i] + "と";
-				}
-			}
-		}
-		setSum(str);
+          str += ingredients[i] + "と";
+        }
+      }
+    }
+    setSum(str);
 
     setInputValue(`${sum}を使って${time}でできる${style}な${type}`);
-		console.log(inputValue);
-	};
+    console.log(inputValue);
+  };
 
   const [apiResponse, setApiResponse] = useState({
-		title: "",
-		ingredients: [],
-		steps: [],
-	});
+    title: "",
+    ingredients: [],
+    steps: [],
+  });
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -49,7 +49,7 @@ export default function Home() {
       const data = await response.json();
 			const {title, ingredients, steps} = JSON.parse(data.message);
       setApiResponse({title, ingredients, steps});
-			console.log(apiResponse);
+      console.log(apiResponse);
     } catch (error) {
       console.log(error);
     }
@@ -57,10 +57,9 @@ export default function Home() {
 
   return (
     <div id="consultation">
-			<p>を使って</p>
+      <p>を使って</p>
       <form onSubmit={handleSubmit}>
-        <div>
-
+        <div className="grid">
           <select
             onChange={(e) => {
               setTime(e.target.value);

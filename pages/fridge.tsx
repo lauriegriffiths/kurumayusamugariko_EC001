@@ -45,7 +45,7 @@ export default function Fridge({
       <h2>冷蔵庫の中身</h2>
       <ul>
         {fridge.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} style={{ listStyleType: "none" }}>
             <button
               onClick={() => {
                 toggleSelection(item);
